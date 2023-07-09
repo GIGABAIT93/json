@@ -1,0 +1,35 @@
+{
+    "name": "phplibw/json",
+    "description": "Laravel JSON lib",
+    "license": "MIT",
+    "type": "library",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "GIGABAIT",
+            "email": "xgigabaitx@gmail.com",
+            "role": "Developer"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Phplibw\\Json\\": "src/"
+        }
+    },
+
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "*",
+        "guzzlehttp/guzzle": "*"
+    },
+    
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Phplibw\\Json\\JsonServiceProvider"
+            ]
+        }
+    }
+}
