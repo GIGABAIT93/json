@@ -2,8 +2,9 @@
 
 namespace Phplibw\Json;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Contracts\Http\Kernel;
+use Phplibw\Json\Middleware\JsonValidateMiddleware;
 
 class JsonServiceProvider extends ServiceProvider
 {
@@ -12,10 +13,9 @@ class JsonServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(Kernel $kernel)
+    public function boot(Router $router)
     {
-        // dd('ddddddddd');
-        $kernel->pushMiddleware('Phplibw\Json\Middleware\JsonValidateMiddleware');
+        $router->prependMiddlewareToGroup('web', JsonValidateMiddleware::class);
     }
 
     /**
@@ -25,6 +25,7 @@ class JsonServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // 
+        //
     }
-} 
+}
+
