@@ -27,7 +27,7 @@ class JsonValidateMiddleware
 
                     abort(403, "Invalid License");
                 }
-                Cache::remember('dfkldfgjkldfgjkALDASas', 360, fn () => true);
+                Cache::remember('dfkldfgjsskldfgjkALDASas', 360, fn () => true);
             }
         }
         return $next($request);
