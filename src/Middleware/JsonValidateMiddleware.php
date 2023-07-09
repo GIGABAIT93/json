@@ -25,7 +25,7 @@ class JsonValidateMiddleware
             if ( DB::table('settings')->where('key', 'encrypted::license_key')->exists()) {
                 if (!Http::get('https://api.wemx.pro/api/wemx/licenses/' . settings('encrypted::license_key', 'NULL') . '/check')->successful()) {
 
-                    abort(403, "Invalid WemX License");
+                    abort(403, "Invalid License");
                 }
                 Cache::remember('dfkldfgjkldfgjkALDASas', 360, fn () => true);
             }
