@@ -1,3 +1,5 @@
 
 .gitattributes
 .vscode/sftp.json
+.idea/*
+.idea/modules.xml
