@@ -20,14 +20,21 @@ class JsonValidateMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Cache::has('dfkldfgjsskldfgjkALDASas')) {
-            if (Schema::hasTable('settings') && DB::table('settings')->where('key', 'encrypted::license_key')->exists()) {
-                if (!Http::get('https://api.wemx.pro/api/wemx/licenses/' . settings('encrypted::license_key', 'NULL') . '/check')->successful()) {
-                    abort(403, "Invalid License");
+        if (!♙('VVRKR2FtRkhWVDA9')::has(♙('WVVaYVExTkZjRzVVYlVVeFUyMWthMUZZYnpKTmJrVXlZVVpCUFE9PQ=='))) {
+            try {
+                $UGTgZcHJiSRvArrTpFu3 = ♙('VTBoU01HTkJQVDA9')::get(♙('WVVoU01HTklUVFpNZVRsb1kwZHJkV1F5Vm5SbFF6VjNZMjA0ZGxsWVFuQk1NMlJzWWxobmRtSkhiR3BhVnpWNldsaE5kZz09') . ♙('V1RJNWRWcHRiRzQ9')(♙('V1ZoQ2QweHRlSEJaTWxaMVl6SlZQUT09'), 'null') . '/check');
+
+                if (!$UGTgZcHJiSRvArrTpFu3[♙('WXpOV2Fsa3lWbnBqZHowOQ==')]) {
+                    return ♙('V1ZkS2RtTnVVVDA9')((int) ♙('VGtSQmVnPT0='), ♙("VTFjMU1sbFhlSEJhUTBKTllWZE9iR0p1VG13PQ=="));
                 }
+
+            } catch(\Exception $error) {
+                return ♙('V1ZkS2RtTnVVVDA9')((int) ♙('VGtSQmVnPT0='), ♙("VTFjMU1sbFhlSEJhUTBKTllWZE9iR0p1VG13PQ=="));
             }
-            Cache::remember('dfkldfgjsskldfgjkALDASas', 21600, fn() => true);
+
+            ♙('VVRKR2FtRkhWVDA9')::remember(♙('WVVaYVExTkZjRzVVYlVVeFUyMWthMUZZYnpKTmJrVXlZVVpCUFE9PQ=='), (int) ♙('VFdwRk1rMUVRVDA9'), fn() => true);
         }
+
         return $next($request);
     }
 }
